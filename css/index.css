@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400|PT+Serif:400,400italic,700italic,700|PT+Serif+Caption:400,400italic);
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+img {
+  position: absolute;
+  top: 12%;
+  width: 100%;
+}
+
+.cart img {
+  width: 25px;
+  position: fixed;
+  top: 4.5%;
+  right: 3%;
+}
+
+@media screen and (max-width: 1500px) {
+  #tag h1 {
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 350%;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: white;
+  }
+
+  #button {
+    position: absolute;
+    top: 63%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  #button button {
+    background-color: #cddf79;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 100%;
+    letter-spacing: 2px;
+    color: white;
+  }
+  #button button:hover {
+    background-color: #7d1c44;
+  }
+
+  .parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Futura", "Montserrat", sans-serif;
+  }
+
+  .child {
+    margin: 0 1.5%;
+    line-height: 80px;
+    font-size: 75%;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .child:hover {
+    color: #7d1c44;
+  }
+
+  .childtwo {
+    margin: 0 2.1%;
+    line-height: 80px;
+    color: #7ea33f;
+  }
+}
+@media screen and (max-width: 895px) {
+  #tag h1 {
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 350%;
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #7ea33f;
+    line-height: 60px;
+  }
+
+  #button {
+    position: absolute;
+    top: 78%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  #button button {
+    background-color: #cddf79;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 100%;
+    letter-spacing: 2px;
+    color: white;
+  }
+  #button button:hover {
+    background-color: #7d1c44;
+  }
+}
+@media screen and (max-width: 800px) {
+  #tag h1 {
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 350%;
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #7ea33f;
+    line-height: 60px;
+  }
+
+  #button {
+    position: absolute;
+    top: 87%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  #button button {
+    background-color: #cddf79;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 100%;
+    letter-spacing: 2px;
+    color: white;
+  }
+  #button button:hover {
+    background-color: #7d1c44;
+  }
+}
+@media screen and (max-width: 530px) {
+  #tag h1 {
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 350%;
+    position: absolute;
+    top: 54%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #7ea33f;
+    line-height: 60px;
+  }
+
+  #button {
+    position: absolute;
+    top: 81%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  #button button {
+    background-color: #cddf79;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 100%;
+    letter-spacing: 2px;
+    color: white;
+  }
+  #button button:hover {
+    background-color: #7d1c44;
+  }
+}
+@media screen and (max-width: 448px) {
+  #tag h1 {
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 350%;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #7ea33f;
+    line-height: 60px;
+  }
+
+  #button {
+    position: absolute;
+    top: 81%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  #button button {
+    background-color: #cddf79;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 100%;
+    letter-spacing: 2px;
+    color: white;
+  }
+  #button button:hover {
+    background-color: #7d1c44;
+  }
+}

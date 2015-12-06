@@ -1,0 +1,246 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400|PT+Serif:400,400italic,700italic,700|PT+Serif+Caption:400,400italic);
+
+$font-stack: 'Futura', 'Montserrat', sans-serif;
+$font-accent: 'Georgia', 'PT Serif', sans-serif;
+$outside-margin: 3%;
+$color-main: #7ea33f;
+$color-light: #cddf79;
+$color-accent: #7d1c44;
+
+body{
+	width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+img{
+	position: absolute;
+	top: $outside-margin *4;
+	width: 100%;
+}
+
+.cart {
+	img{
+		width: 25px;
+		position: fixed;
+		top: $outside-margin + 1.5%;
+		right: $outside-margin;
+	}	
+}
+
+@media screen and (max-width : 1500px) {
+	#tag{
+		h1{
+			font-family: $font-stack;
+			font-size: 350%;
+    		position: absolute;
+			top: $outside-margin*15;
+			width: 100%;
+			margin: 0;
+			text-align: center;
+			letter-spacing: 2px;
+			color: white;
+		}
+	}
+
+	#button{
+	    position: absolute;
+		top: $outside-margin*21;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+		button{
+			background-color: $color-light;
+			border: none;
+			width: 200px;
+			height: 40px;
+			font-family: $font-stack;
+			font-size: 100%;
+			letter-spacing: 2px;
+			color: white;
+		}
+		button:hover {
+			background-color: $color-accent;
+		}
+	}
+
+	.parent {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+ 		font-family: $font-stack;
+	}
+
+	.child {
+		margin: 0 $outside-margin * .5 ;
+		line-height: 80px;
+		font-size: 75%;
+		letter-spacing: 2px;
+		text-decoration: none;
+		color: black;
+	}
+	.child:hover {
+ 			color: $color-accent;
+ 	}
+
+	.childtwo {
+		margin: 0 $outside-margin * .7;
+		line-height: 80px;
+		color: $color-main;
+	}
+}
+
+@media screen and (max-width : 895px) {
+	#tag{
+		h1{
+			font-family: $font-stack;
+			font-size: 350%;
+    		position: absolute;
+			top: $outside-margin*20;
+			width: 100%;
+			margin: 0;
+			text-align: center;
+			letter-spacing: 2px;
+			color: $color-main;
+			line-height: 60px;
+		}
+	}
+
+	#button{
+	    position: absolute;
+		top: $outside-margin*26;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+		button{
+			background-color: $color-light;
+			border: none;
+			width: 200px;
+			height: 40px;
+			font-family: $font-stack;
+			font-size: 100%;
+			letter-spacing: 2px;
+			color: white;
+		}
+		button:hover {
+			background-color: $color-accent;
+		}
+	}
+}
+
+@media screen and (max-width : 800px) {
+	#tag{
+		h1{
+			font-family: $font-stack;
+			font-size: 350%;
+    		position: absolute;
+			top: $outside-margin*20;
+			width: 100%;
+			margin: 0;
+			text-align: center;
+			letter-spacing: 2px;
+			color: $color-main;
+			line-height: 60px;
+		}
+	}
+
+	#button{
+	    position: absolute;
+		top: $outside-margin*29;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+		button{
+			background-color: $color-light;
+			border: none;
+			width: 200px;
+			height: 40px;
+			font-family: $font-stack;
+			font-size: 100%;
+			letter-spacing: 2px;
+			color: white;
+		}
+		button:hover {
+			background-color: $color-accent;
+		}
+	}
+}
+
+@media screen and (max-width : 530px) {
+	#tag{
+		h1{
+			font-family: $font-stack;
+			font-size: 350%;
+    		position: absolute;
+			top: $outside-margin*18;
+			width: 100%;
+			margin: 0;
+			text-align: center;
+			letter-spacing: 2px;
+			color: $color-main;
+			line-height: 60px;
+		}
+	}
+
+	#button{
+	    position: absolute;
+		top: $outside-margin*27;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+		button{
+			background-color: $color-light;
+			border: none;
+			width: 200px;
+			height: 40px;
+			font-family: $font-stack;
+			font-size: 100%;
+			letter-spacing: 2px;
+			color: white;
+		}
+		button:hover {
+			background-color: $color-accent;
+		}
+	}
+}
+
+@media screen and (max-width : 448px) {
+	#tag{
+		h1{
+			font-family: $font-stack;
+			font-size: 350%;
+    		position: absolute;
+			top: $outside-margin*15;
+			width: 100%;
+			margin: 0;
+			text-align: center;
+			letter-spacing: 2px;
+			color: $color-main;
+			line-height: 60px;
+		}
+	}
+
+	#button{
+	    position: absolute;
+		top: $outside-margin*27;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+		button{
+			background-color: $color-light;
+			border: none;
+			width: 200px;
+			height: 40px;
+			font-family: $font-stack;
+			font-size: 100%;
+			letter-spacing: 2px;
+			color: white;
+		}
+		button:hover {
+			background-color: $color-accent;
+		}
+	}
+}
+
+

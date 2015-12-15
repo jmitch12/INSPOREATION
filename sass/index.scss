@@ -1,11 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400|PT+Serif:400,400italic,700italic,700|PT+Serif+Caption:400,400italic);
+//Drop-Down Menu source = http://codepen.io/corysimmons/pen/KbFcg
 
-$font-stack: 'Futura', 'Montserrat', sans-serif;
-$font-accent: 'Georgia', 'PT Serif', sans-serif;
-$outside-margin: 3%;
-$color-main: #7ea33f;
-$color-light: #cddf79;
-$color-accent: #7d1c44;
+@import "_base.scss";
 
 body{
 	width: 100%;
@@ -17,12 +12,63 @@ img{
 	position: absolute;
 	top: $outside-margin *4;
 	width: 100%;
+	z-index: -1;
+}
+
+.mobile {
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.mobile div {
+  display: none;
+}
+
+.mobile button {
+  margin: 25px 0 25px $outside-margin - 1%;
+  border: 0;
+  text-indent: 200%;
+  overflow: hidden;
+  background: rgba(255,255,255,0.8) url("http://i.imgur.com/vKRaKDX.png") center no-repeat;
+  border-radius: 3px;
+  background-size: 80%;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  -webkit-transition: all 400ms ease;
+          transition: all 400ms ease;
+}
+
+.mobile button.expanded {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-color: transparent;
+  border: 0;
+}
+
+.mobile a {
+  display: block;
+  background: rgba(125,28,68,0.8);
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+  color: white;
+  font-family: $font-stack;
+  font-weight: bold;
+}
+
+.mobile a:hover {
+  opacity: .9;
 }
 
 .cart {
 	img{
 		width: 25px;
-		position: fixed;
+		position: absolute;
 		top: $outside-margin + 1.5%;
 		right: $outside-margin;
 	}	
@@ -57,10 +103,10 @@ img{
 			font-family: $font-stack;
 			font-size: 100%;
 			letter-spacing: 2px;
-			color: white;
+			color: $grey;
 		}
 		button:hover {
-			background-color: $color-accent;
+			opacity: 0.8;
 		}
 	}
 
@@ -78,8 +124,9 @@ img{
 		font-size: 75%;
 		letter-spacing: 2px;
 		text-decoration: none;
-		color: black;
+		color: $grey;
 	}
+
 	.child:hover {
  			color: $color-accent;
  	}
@@ -89,6 +136,108 @@ img{
 		line-height: 80px;
 		color: $color-main;
 	}
+
+	.childtwo a{
+		text-decoration: none;
+		color: $color-main;
+	}
+
+	.title {
+		position:absolute;
+		top: $outside-margin * 5;
+		font-size: $title;
+		width: 100%;
+		text-align: center;
+		h2{
+			color:$grey;
+			margin: 0;
+			font-family: $font-stack;
+			letter-spacing: 8px;
+		}
+		h4{
+			margin: 0;
+			font-family: $font-accent;
+			font-size: $sub-title;
+			letter-spacing: 1px;
+			color: $light-grey;
+		}
+	}
+
+	.subnav {
+		display: flex;
+		top: 200px;
+		flex-direction: row;
+		// justify-content: center;
+		margin-left: $outside-margin + 1%;
+		margin-right: $outside-margin;
+	}
+
+	.image {
+		width: 30vw;
+		padding-right: 30px;
+	}
+
+	.image img{
+		column-count: 3;
+		column-width: 100%;
+		width: 30%;
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+
+	.image img:hover{
+		opacity: .6;
+	}
+
+	.title2 {
+		position:absolute;
+		top: $outside-margin * 35;
+		font-size: $title;
+		width: 100%;
+		text-align: center;
+		h2{
+			color:$grey;
+			margin: 0;
+			font-family: $font-stack;
+			letter-spacing: 8px;
+		}
+		h4{
+			margin: 0;
+			font-family: $font-accent;
+			font-size: $sub-title;
+			letter-spacing: 1px;
+			color: $light-grey;
+		}
+	}
+
+	.subnav2 {
+		display: flex;
+		top: 200px;
+		flex-direction: row;
+		// justify-content: center;
+		margin-left: $outside-margin + 1%;
+		margin-right: $outside-margin;
+	}
+
+	.image2 {
+		width: 30vw;
+		height: 5vh;
+		padding-right: 30px;
+		overflow: hidden;
+	}
+
+	.image2 img{
+		column-count: 3;
+		column-width: 100%;
+		width: 30%;
+		margin-top: 712px;
+		margin-bottom: 50px;
+	}
+
+	.image2 img:hover{
+		opacity: .6;
+	}
+
 }
 
 @media screen and (max-width : 895px) {
@@ -121,15 +270,16 @@ img{
 			font-family: $font-stack;
 			font-size: 100%;
 			letter-spacing: 2px;
-			color: white;
+			color: $grey;
 		}
-		button:hover {
-			background-color: $color-accent;
+		button:hover, button:click {
+			opacity: 0.8;
 		}
 	}
 }
 
 @media screen and (max-width : 800px) {
+
 	#tag{
 		h1{
 			font-family: $font-stack;
@@ -159,11 +309,67 @@ img{
 			font-family: $font-stack;
 			font-size: 100%;
 			letter-spacing: 2px;
-			color: white;
+			color: $grey;
 		}
 		button:hover {
-			background-color: $color-accent;
+			opacity: 0.8;
 		}
+	}
+	.mobile{
+		display: block;
+	}
+	.child{
+		display: none;
+	}
+
+	.title {
+		position:absolute;
+		top: $outside-margin * 5;
+		font-size: $title;
+		width: 100%;
+		text-align: center;
+		h2{
+			color:$grey;
+			margin: 0;
+			font-family: $font-stack - 10%;
+			letter-spacing: 8px;
+		}
+		h4{
+			margin: 0;
+			font-family: $font-accent;
+			font-size: $sub-title - 5%;
+			letter-spacing: 1px;
+			color: $light-grey;
+		}
+	}
+}
+
+@media screen and (max-width : 700px) {
+	.subnav {
+		display: flex;
+		flex-direction: column;
+		margin-right: $outside-margin;
+	}
+
+	.image {
+		width: 30vw;
+		display: inline;
+		// padding-right: 30px;
+	}
+
+	.image img{
+		column-count: 1;
+		display: inline;
+		width: 92%;
+		margin-top: 100px;
+	}
+
+	.image img:hover{
+		opacity: .6;
+	}
+
+	.image a img:nth-child(2){
+		margin-top: 900px;
 	}
 }
 
@@ -197,10 +403,31 @@ img{
 			font-family: $font-stack;
 			font-size: 100%;
 			letter-spacing: 2px;
-			color: white;
+			color: $grey;
 		}
 		button:hover {
-			background-color: $color-accent;
+			opacity: 0.8;
+		}
+	}
+
+	.title {
+		position:absolute;
+		top: $outside-margin * 5;
+		font-size: $title;
+		width: 100%;
+		text-align: center;
+		h2{
+			color:$grey;
+			margin: 0;
+			font-family: $font-stack - 20%;
+			letter-spacing: 8px;
+		}
+		h4{
+			margin: 0;
+			font-family: $font-accent;
+			font-size: $sub-title - 8%;
+			letter-spacing: 1px;
+			color: $light-grey;
 		}
 	}
 }
@@ -235,10 +462,10 @@ img{
 			font-family: $font-stack;
 			font-size: 100%;
 			letter-spacing: 2px;
-			color: white;
+			color: $grey;
 		}
 		button:hover {
-			background-color: $color-accent;
+			opacity: 0.8;
 		}
 	}
 }
